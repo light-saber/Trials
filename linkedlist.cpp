@@ -1,9 +1,16 @@
-#include <iostream>
+/* A part of practice 
+   Trying out some basic codes
+   This code in C++ initialises a linked list
+   Traverses a linked list
+   Deletes an element from the linked list 
+   I have'nt used functions here
+   Will use them in the next code */
 
+#include <iostream>
 
 using namespace std;
 
-struct node
+struct node //define a structure node
 {
 	int data;
 	struct node *next;
@@ -13,10 +20,10 @@ int main()
 {
 	char ans;
 	struct node *start = NULL;
-	do
+	do //Inserting
 	{
 		struct node *newnode, *current;
-		newnode = (struct node *) malloc (sizeof(struct node));
+		newnode = (struct node *) malloc (sizeof(struct node)); //create a new node
 		cout<<"\nEnter a value: ";
 		cin>>newnode->data;
 		newnode->next = NULL;
@@ -35,7 +42,7 @@ int main()
 	}
 	while (ans == 'y' | ans == 'Y');
 
-	cout<<"\n\nDisplaying the elements of the list\n\n";
+	cout<<"\n\nDisplaying the elements of the list\n\n"; //Traversing
 	struct node *ptr = start;
 	while (ptr != NULL)
 	{
@@ -44,9 +51,9 @@ int main()
 	}
 	cout<<"NULL\n";
 	int delete_element;
-	cout<<"\n\nEnter the element you wish to delete: ";
+	cout<<"\n\nEnter the element you wish to delete: "; //Deleting
 	cin>>delete_element;
-	if (delete_element == start->data)
+	if (delete_element == start->data) //Check if the first element is the one to be deleted
 		start = start->next;
 	struct node *ptr1 = start;
 	struct node *ptrprev = start;
@@ -54,14 +61,13 @@ int main()
 	{
 		if (delete_element == ptr1->data)
 		{
-			ptrprev->next=ptr1->next;
-			//ptr1=ptr1->next;
+			ptrprev->next=ptr1->next; //Delete operation
 			break;
 		}
 		ptrprev=ptr1;
 		ptr1=ptr1->next;		
 	}
-	cout<<"\n\nThe new linked list is: \n";
+	cout<<"\n\nThe new linked list is: \n"; //Traversing the new linked list
 	struct node *ptr2 = start;
 	while (ptr2 != NULL)
 	{
@@ -70,7 +76,7 @@ int main()
 	}
 	cout<<"NULL\n";
 
-
+	//End
 
 }
 
