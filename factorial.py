@@ -1,5 +1,7 @@
 #Factorial - spoj.pl
 #Python - Exceeds Time Limit
+#Created by light-saber
+#2014.06.30
 
 #!/bin/bash
 
