@@ -4,6 +4,10 @@
    Ex: Input: 3->5->7->12->14->15->17->NULL
        Ouptut: 5->3->12->7->14->15->17->NULL
 */       
+
+//Created by light-saber
+//2014.06.30
+
 #include <iostream>
 
 using namespace std;
