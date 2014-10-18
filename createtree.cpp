@@ -15,7 +15,7 @@ struct node  //Node Structure
 struct node* newNode(int data) //Creating new node
 {
 	struct node* node = (struct node*)malloc(sizeof(struct node));
-	node->data = data;n
+	node->data = data;
 	node->left = NULL;
 	node->right = NULL;
 	return(node);
